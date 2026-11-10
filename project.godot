@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SMX Racing"
-run/main_scene="uid://uyxmlbaoxowx"
+run/main_scene="uid://74n533murg3o"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

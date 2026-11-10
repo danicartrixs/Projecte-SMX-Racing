@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://74n533murg3o"]
+
+[ext_resource type="Texture2D" uid="uid://benicq3orsia5" path="res://coche.png" id="1_dg4yp"]
+
+[sub_resource type="Curve2D" id="Curve2D_7m4ee"]
+
+[node name="Races" type="Node2D" unique_id=2068203175]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1526222424]
+curve = SubResource("Curve2D_7m4ee")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1176730573]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1577260248]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1501478594]
+texture = ExtResource("1_dg4yp")
