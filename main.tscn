@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://olkga8xn2c2c"]
+
+[ext_resource type="Texture2D" uid="uid://bgsu2tq3xfvbb" path="res://Circuito/circuito_sprite.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://chafrfaajwwlv" path="res://Scenes/coche.gd" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dy8oejin4bj5n" path="res://Coche/coche.png" id="2_h2yge"]
+
+[node name="Node2D" type="Node2D" unique_id=1159918597]
+
+[node name="Circuito" type="Node2D" parent="." unique_id=187155269]
+
+[node name="Sprite2D" type="Sprite2D" parent="Circuito" unique_id=1694650224]
+texture = ExtResource("1_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Circuito" unique_id=2017932508]
+
+[node name="Coche" type="CharacterBody2D" parent="." unique_id=1071695062]
+position = Vector2(900, 361)
+script = ExtResource("2_1bvp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Coche" unique_id=266626047]
+texture = ExtResource("2_h2yge")
+
+[node name="Camera2D" type="Camera2D" parent="Coche" unique_id=1774820432]
