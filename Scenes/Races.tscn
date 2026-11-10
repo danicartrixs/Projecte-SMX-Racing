@@ -1,17 +1,36 @@
 [gd_scene format=3 uid="uid://74n533murg3o"]
 
-[ext_resource type="Texture2D" uid="uid://benicq3orsia5" path="res://coche.png" id="1_dg4yp"]
+[ext_resource type="Script" uid="uid://chafrfaajwwlv" path="res://Scenes/coche.gd" id="2_b7ho5"]
+[ext_resource type="Texture2D" uid="uid://dy8oejin4bj5n" path="res://Coche/coche.png" id="2_srkxs"]
+[ext_resource type="Texture2D" uid="uid://bgsu2tq3xfvbb" path="res://Circuito/circuito_sprite.png" id="3_b7ho5"]
 
 [sub_resource type="Curve2D" id="Curve2D_7m4ee"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 167.16922, -66.68925)
+}
+point_count = 1
 
 [node name="Races" type="Node2D" unique_id=2068203175]
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1526222424]
+position = Vector2(-150, 80)
+rotation = -0.1312903
 curve = SubResource("Curve2D_7m4ee")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1176730573]
+[node name="Circuito" type="Node2D" parent="." unique_id=1542448965]
+position = Vector2(-85.50403, -51.64087)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1577260248]
+[node name="Sprite2D" type="Sprite2D" parent="Circuito" unique_id=1793281253]
+position = Vector2(-792, -766)
+texture = ExtResource("3_b7ho5")
+centered = false
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1501478594]
-texture = ExtResource("1_dg4yp")
+[node name="Coche" type="Node2D" parent="." unique_id=132582232]
+script = ExtResource("2_b7ho5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Coche" unique_id=1899787232]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_srkxs")
+
+[node name="Camera2D" type="Camera2D" parent="Coche" unique_id=1963848063]
+position_smoothing_enabled = true
