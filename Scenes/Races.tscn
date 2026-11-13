@@ -48,4 +48,5 @@ texture = ExtResource("2_srkxs")
 
 [node name="Camera2D" type="Camera2D" parent="Coche" unique_id=1963848063]
 position = Vector2(103.999985, -255)
+zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
