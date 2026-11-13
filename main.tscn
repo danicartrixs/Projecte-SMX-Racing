@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://chafrfaajwwlv" path="res://Scenes/coche.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dy8oejin4bj5n" path="res://Coche/coche.png" id="2_h2yge"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+
 [node name="Node2D" type="Node2D" unique_id=1159918597]
 
 [node name="Circuito" type="Node2D" parent="." unique_id=187155269]
@@ -13,9 +15,13 @@ texture = ExtResource("1_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="Circuito" unique_id=2017932508]
 
-[node name="Coche" type="CharacterBody2D" parent="." unique_id=1071695062]
+[node name="Coche" type="CharacterBody2D" parent="." unique_id=308952631]
 position = Vector2(900, 361)
 script = ExtResource("2_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coche" unique_id=585389311]
+position = Vector2(-900, -361)
+shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="Sprite2D" type="Sprite2D" parent="Coche" unique_id=266626047]
 texture = ExtResource("2_h2yge")

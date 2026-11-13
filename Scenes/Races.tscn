@@ -1,36 +1,51 @@
 [gd_scene format=3 uid="uid://74n533murg3o"]
 
+[ext_resource type="Script" uid="uid://bjigwf88ekic0" path="res://Scenes/path_follow_2d.gd" id="1_tfnn2"]
 [ext_resource type="Script" uid="uid://chafrfaajwwlv" path="res://Scenes/coche.gd" id="2_b7ho5"]
 [ext_resource type="Texture2D" uid="uid://dy8oejin4bj5n" path="res://Coche/coche.png" id="2_srkxs"]
 [ext_resource type="Texture2D" uid="uid://bgsu2tq3xfvbb" path="res://Circuito/circuito_sprite.png" id="3_b7ho5"]
+[ext_resource type="Texture2D" uid="uid://ba8h45ntvfg6g" path="res://Circuito/circuito_mascara_asfalto.png" id="4_cibxv"]
 
 [sub_resource type="Curve2D" id="Curve2D_7m4ee"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 167.16922, -66.68925)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0)
 }
 point_count = 1
 
 [node name="Races" type="Node2D" unique_id=2068203175]
 
-[node name="Path2D" type="Path2D" parent="." unique_id=1526222424]
-position = Vector2(-150, 80)
-rotation = -0.1312903
-curve = SubResource("Curve2D_7m4ee")
-
 [node name="Circuito" type="Node2D" parent="." unique_id=1542448965]
 position = Vector2(-85.50403, -51.64087)
 
 [node name="Sprite2D" type="Sprite2D" parent="Circuito" unique_id=1793281253]
-position = Vector2(-792, -766)
+position = Vector2(-1019.496, -1079.3591)
 texture = ExtResource("3_b7ho5")
 centered = false
 
-[node name="Coche" type="Node2D" parent="." unique_id=132582232]
+[node name="Path2D" type="Path2D" parent="Circuito" unique_id=1526222424]
+position = Vector2(-64.49597, 131.64087)
+rotation = -0.1312903
+scale = Vector2(1.7243689, 1)
+curve = SubResource("Curve2D_7m4ee")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Circuito/Path2D" unique_id=362973192]
+position = Vector2(167.16922, -66.68925)
+rotation = 2.7620068
+script = ExtResource("1_tfnn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Circuito/Path2D/PathFollow2D" unique_id=882615678]
+position = Vector2(-3.8749766, 225.16455)
+scale = Vector2(0.4037689, 0.7730253)
+
+[node name="Coche" type="CharacterBody2D" parent="." unique_id=1765692280]
+position = Vector2(-61, -221)
 script = ExtResource("2_b7ho5")
+mascara_tex = ExtResource("4_cibxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="Coche" unique_id=1899787232]
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_srkxs")
 
 [node name="Camera2D" type="Camera2D" parent="Coche" unique_id=1963848063]
+position = Vector2(103.999985, -255)
 position_smoothing_enabled = true
