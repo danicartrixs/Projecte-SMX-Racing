@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dy8oejin4bj5n" path="res://Coche/coche.png" id="2_srkxs"]
 [ext_resource type="Texture2D" uid="uid://bgsu2tq3xfvbb" path="res://Circuito/circuito_sprite.png" id="3_b7ho5"]
 [ext_resource type="Texture2D" uid="uid://ba8h45ntvfg6g" path="res://Circuito/circuito_mascara_asfalto.png" id="4_cibxv"]
+[ext_resource type="Script" uid="uid://bqhw45rafykvq" path="res://Scenes/camera_2d.gd" id="6_gb4qx"]
 
 [sub_resource type="Curve2D" id="Curve2D_7m4ee"]
 _data = {
@@ -46,7 +47,6 @@ mascara_tex = ExtResource("4_cibxv")
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_srkxs")
 
-[node name="Camera2D" type="Camera2D" parent="Coche" unique_id=1963848063]
-position = Vector2(103.999985, -255)
-zoom = Vector2(0.6, 0.6)
-position_smoothing_enabled = true
+[node name="Camera2D" type="Camera2D" parent="Coche" unique_id=378346865]
+position = Vector2(61, 221)
+script = ExtResource("6_gb4qx")
